@@ -68,7 +68,8 @@ write_csv(diverse_genus, 'output_species_count/species_counts_table.csv')
 
 ggplot(data = diverse_genus, mapping = aes(x = species_id, y = n, fill = genus)) +
   
-  geom_bar(stat = 'identity')
+  geom_bar(stat = 'identity') + 
+  scale_fill_grey()
 
 
 ggsave('output_species_count/species_counts_barplot.png')
